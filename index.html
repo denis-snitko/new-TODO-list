@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <title>Todo List</title>
+    <style>
+      .list-group-item + .list-group-item {
+        border-top-width: 1px;
+      }
+
+      .task-title,
+      .task-text {
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-section mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col col-8 mx-auto">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Добавить новую задачу</h5>
+                <form name="addTask">
+                  <input
+                    type="text"
+                    name="title"
+                    id="title"
+                    class="form-control"
+                    placeholder="Заголовок задачи"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="body"
+                    id="body"
+                    class="form-control mt-3"
+                    placeholder="Текст задачи (необязательно)"
+                  />
+                  <button type="submit" class="btn btn-primary mt-4">
+                    Добавить
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tasks-list-section mt-5">
+      <div class="container">
+        <ul class="list-group"></ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
